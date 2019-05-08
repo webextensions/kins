@@ -1,0 +1,13 @@
+{
+    // https://github.com/wk-j/vscode-save-and-run#sample-config
+    "saveAndRun": {
+        "commands": [
+            {
+                "match": "package.cjson",
+                "cmd": "./scripts/housekeeping/generate-package-json.sh",
+                "useShortcut": false,
+                "silent": true
+            }
+        ]
+    }
+}

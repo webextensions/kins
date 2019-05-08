@@ -1,0 +1,2 @@
+export const
+    TODOS__REMOVE_CLICKED = 'TODOS__REMOVE_CLICKED';

@@ -1,0 +1,18 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_launch-configuration-attributes
+        {
+            "name": "npm run mocha-inspect-brk",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run", "mocha-inspect-brk"],
+            "port": 9229
+        }
+    ]
+}

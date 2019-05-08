@@ -1,0 +1,17 @@
+.RemoveTodo {
+    float: right;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+
+    opacity: 0;
+}
+.Todo:hover .RemoveTodo {
+    opacity: 1;
+}
+
+.RemoveTodo:after {
+    content: '×';
+    color: #af5b5e;
+}

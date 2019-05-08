@@ -1,0 +1,104 @@
+{
+  "name": "kins",
+  "version": "0.1.1",
+  "description": "Kins is an event based JavaScript library to help in developing web pages",
+  "main": "kins.js",
+  "scripts": {
+    "postinstall": "copy-files-from-to",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+
+    // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
+    // https://github.com/rstacruz/jsdom-global#mocha
+    // https://github.com/mochajs/mocha/wiki/compilers-deprecation
+    "mocha": "mocha --require @babel/register --require jsdom-global/register ./src/**/*.test.js",
+    "mocha-forbid-only": "npm run mocha -- --forbid-only",      // In scenarios which require full tests, ensure that tests fails if ".only()" has been used by mistake
+                                                                // For example, when it is being used in CI server or pre-commit/push hooks
+
+    "mocha-inspect-brk": "npm run mocha -- --inspect-brk",
+
+    "test": "npm run all-is-well",
+
+    "all-is-well": "./scripts/all-is-well.sh",
+
+    // Install "graphviz" before using this script
+    // $ sudo apt install graphviz -y
+    "dependency-graph-todomvc": "madge --image demo/todomvc/temp/dependency-graph.svg --exclude '(\\.events|kins)\\.js' ./demo/todomvc/Components/TodoMVC/Todos/Todos.js  --rankdir TB",
+
+    // https://www.npmjs.com/package/http-server#available-options
+    "start": "http-server demo -c-1 -o"
+  },
+
+  // https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+  // Note: Some of the common files, like package.json, README.md, LICENSE etc are always included
+  "files": [
+    "src/kins.js"
+  ],
+
+  "husky": {
+    "hooks": {
+      "post-checkout": "./husky/post-checkout.sh",
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webextensions/kins.git"
+  },
+  "keywords": [
+    "kins",
+    "event",
+    "based",
+    "javascript",
+    "library",
+    "develop",
+    "web",
+    "pages",
+    "sites"
+  ],
+  "author": "Priyank Parashar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webextensions/kins/issues"
+  },
+  "homepage": "https://github.com/webextensions/kins#readme",
+  "devDependencies": {
+    // Babel (Currently used for tests)
+    "@babel/core": "^7.4.4",            // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
+    "@babel/preset-env": "^7.4.4",      // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
+                                        // https://babeljs.io/docs/en/env/
+                                        // https://babeljs.io/docs/en/babel-preset-env
+    "@babel/register": "^7.4.4",        // https://babeljs.io/docs/en/next/babel-register.html
+
+    // Git hooks
+    "husky": "^2.2.0",
+
+    // Linting
+    "eslint": "^5.16.0",
+
+    // Static file server
+    "http-server": "^0.11.1",
+
+    // CSS reset
+    "styles-reset": "0.1.0",
+
+    // Copy files
+    "copy-files-from-to": "1.2.0",
+
+    // Testing
+    "mocha": "^6.1.4",
+    "chai": "^4.2.0",
+    "sinon": "^7.3.2",
+
+    "jsdom": "^15.0.0",
+    "jsdom-global": "^3.0.2",           // https://github.com/rstacruz/jsdom-global#mocha
+
+    // Generate dependency graph
+    "madge": "^3.4.4",
+
+    // Miscellaneous
+    "package-cjson": "0.0.1"            // scripts/housekeeping/generate-package-json.sh
+  }
+}

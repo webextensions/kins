@@ -1,3 +1,8 @@
+# This file is automatically downloaded by scripts/health-checks/check-npm-install-status/check-npm-install-status.js
+scripts/health-checks/check-npm-install-status/semver.js
+
+## Generic ignored files
+
 # Logs
 logs
 *.log

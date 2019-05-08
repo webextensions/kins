@@ -1,0 +1,38 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+*:not(input):not(button) {
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    border: 0;
+    vertical-align:bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+    content: '';
+    content: none;
+}

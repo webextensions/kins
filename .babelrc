@@ -1,0 +1,13 @@
+// .babelrc
+{
+  // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
+  // https://babeljs.io/docs/en/env/
+  // https://babeljs.io/docs/en/babel-preset-env
+  "presets": [
+    [
+      "@babel/preset-env"
+    ]
+  ],
+
+  "plugins": []
+}

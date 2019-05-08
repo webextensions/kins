@@ -1,0 +1,6 @@
+@import url("./TodoList/TodoList.css");
+@import url("./TodosStatus/TodoStatus.css");
+
+.TodosUiBox {
+    background-color: #fff;
+}

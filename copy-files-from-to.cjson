@@ -1,0 +1,8 @@
+{
+    "copyFiles": [
+        {
+            "from": "node_modules/styles-reset/styles-reset.css",
+            "to": "demo/todomvc/styles/css-reset.css"
+        }
+    ]
+}

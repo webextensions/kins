@@ -1,0 +1,7 @@
+.TextTodos {
+    color: rgba(175, 47, 47, 0.15);
+    font-size: 100px;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+}

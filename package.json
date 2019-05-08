@@ -1,0 +1,66 @@
+{
+  "author": "Priyank Parashar",
+  "bugs": {
+    "url": "https://github.com/webextensions/kins/issues"
+  },
+  "description": "Kins is an event based JavaScript library to help in developing web pages",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "chai": "^4.2.0",
+    "copy-files-from-to": "1.2.0",
+    "eslint": "^5.16.0",
+    "http-server": "^0.11.1",
+    "husky": "^2.2.0",
+    "jsdom": "^15.0.0",
+    "jsdom-global": "^3.0.2",
+    "madge": "^3.4.4",
+    "mocha": "^6.1.4",
+    "package-cjson": "0.0.1",
+    "sinon": "^7.3.2",
+    "styles-reset": "0.1.0"
+  },
+  "files": [
+    "src/kins.js"
+  ],
+  "homepage": "https://github.com/webextensions/kins#readme",
+  "husky": {
+    "hooks": {
+      "post-checkout": "./husky/post-checkout.sh",
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "keywords": [
+    "kins",
+    "event",
+    "based",
+    "javascript",
+    "library",
+    "develop",
+    "web",
+    "pages",
+    "sites"
+  ],
+  "license": "MIT",
+  "main": "kins.js",
+  "name": "kins",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webextensions/kins.git"
+  },
+  "scripts": {
+    "all-is-well": "./scripts/all-is-well.sh",
+    "dependency-graph-todomvc": "madge --image demo/todomvc/temp/dependency-graph.svg --exclude '(\\.events|kins)\\.js' ./demo/todomvc/Components/TodoMVC/Todos/Todos.js  --rankdir TB",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "mocha": "mocha --require @babel/register --require jsdom-global/register ./src/**/*.test.js",
+    "mocha-forbid-only": "npm run mocha -- --forbid-only",
+    "mocha-inspect-brk": "npm run mocha -- --inspect-brk",
+    "postinstall": "copy-files-from-to",
+    "start": "http-server demo -c-1 -o",
+    "test": "npm run all-is-well"
+  },
+  "version": "0.1.0"
+}

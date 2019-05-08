@@ -1,0 +1,4 @@
+# http://eslint.org/docs/user-guide/configuring.html#ignoring-files-and-directories
+
+# This file is automatically downloaded by scripts/health-checks/check-npm-install-status/check-npm-install-status.js
+scripts/health-checks/check-npm-install-status/semver.js
