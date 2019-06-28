@@ -1,5 +1,3 @@
-/* globals document, HTMLElement, localStorage */
-
 // http://xahlee.info/js/html5_non-closing_tag.html
 const selfClosingTagNames = [
     'area',
