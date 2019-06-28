@@ -19,7 +19,7 @@
 
     "test": "npm run all-is-well",
 
-    "all-is-well": "./scripts/all-is-well.sh",
+    "all-is-well": "./scripts/health-checks/all-is-well.sh",
 
     // Install "graphviz" before using this script
     // $ sudo apt install graphviz -y

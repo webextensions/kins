@@ -51,7 +51,7 @@
     "url": "git+https://github.com/webextensions/kins.git"
   },
   "scripts": {
-    "all-is-well": "./scripts/all-is-well.sh",
+    "all-is-well": "./scripts/health-checks/all-is-well.sh",
     "dependency-graph-todomvc": "madge --image demo/todomvc/temp/dependency-graph.svg --exclude '(\\.events|kins)\\.js' ./demo/todomvc/Components/TodoMVC/Todos/Todos.js  --rankdir TB",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
