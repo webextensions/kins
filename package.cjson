@@ -66,14 +66,14 @@
   "homepage": "https://github.com/webextensions/kins#readme",
   "devDependencies": {
     // Babel (Currently used for tests)
-    "@babel/core": "^7.4.5",            // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
-    "@babel/preset-env": "^7.4.5",      // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
+    "@babel/core": "^7.5.5",            // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
+    "@babel/preset-env": "^7.5.5",      // http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
                                         // https://babeljs.io/docs/en/env/
                                         // https://babeljs.io/docs/en/babel-preset-env
-    "@babel/register": "^7.4.4",        // https://babeljs.io/docs/en/next/babel-register.html
+    "@babel/register": "^7.5.5",        // https://babeljs.io/docs/en/next/babel-register.html
 
     // Git hooks
-    "husky": "^2.7.0",
+    "husky": "^3.0.1",
 
     // Linting
     "eslint": "^6.0.1",
@@ -85,10 +85,10 @@
     "styles-reset": "0.1.0",
 
     // Copy files
-    "copy-files-from-to": "2.0.2",
+    "copy-files-from-to": "2.0.3",
 
     // Testing
-    "mocha": "^6.1.4",
+    "mocha": "^6.2.0",
     "chai": "^4.2.0",
     "sinon": "^7.3.2",
 
@@ -99,6 +99,6 @@
     "madge": "^3.4.4",
 
     // Miscellaneous
-    "package-cjson": "0.0.2"            // scripts/housekeeping/generate-package-json.sh
+    "package-cjson": "0.0.3"            // scripts/housekeeping/generate-package-json.sh
   }
 }

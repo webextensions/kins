@@ -1,6 +1,9 @@
 # This file is automatically downloaded by scripts/health-checks/check-npm-install-status/check-npm-install-status.js
 scripts/health-checks/check-npm-install-status/semver.js
 
+# Skipping package-lock.json since this is meant to be used as a generic library/package
+package-lock.json
+
 ## Generic ignored files
 
 # Logs
